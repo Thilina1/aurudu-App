@@ -45,11 +45,21 @@ class LocaleString extends Translations {
           'nakath6-1': 'අප්‍රේල් 18 (සඳුදා) උදේ 6:51 ට රැකියාවට පිටත් වීම.',
         },
         'tm_LK': {
-          'hello': 'ಹಲೋ ವರ್ಲ್ಡ್',
-          'message': 'ಪ್ರೋಟೋ ಕೋಡರ್ ಪಾಯಿಂಟ್‌ಗೆ ಸುಸ್ವಾಗತ',
-          'title': 'ಬೀಸು ಭಾಷೆ - ಸ್ಥಳೀಕರಣ',
-          'subscribe': 'ವಂತಿಗೆ ಕೊಡು',
-          'changelang': 'ಭಾಷೆ ಬದಲಿಸಿ'
+          'hello': '',
+          'message': '',
+          'title': '',
+          'nakath1': '',
+          'nakath2': '',
+          'nakath3': '',
+          'nakath4': '',
+          'nakath5': '',
+          'nakath6': '',
+          'nakath1-1': '',
+          'nakath2-1': '',
+          'nakath3-1': '',
+          'nakath4-1': '',
+          'nakath5-1': '',
+          'nakath6-1': '',
         }
       };
 }
