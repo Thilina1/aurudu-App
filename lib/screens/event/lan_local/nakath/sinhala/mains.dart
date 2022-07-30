@@ -12,6 +12,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Aurudu'),
+        backgroundColor: Colors.yellowAccent,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

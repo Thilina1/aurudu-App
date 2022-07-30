@@ -36,6 +36,7 @@ class _CountdownTimerPageState extends State<CountdownTimerPage> {
       appBar: AppBar(
         title: const Text("Nakath"),
         centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 255, 196, 0),
       ),
       body: ListView(
         children: <Widget>[

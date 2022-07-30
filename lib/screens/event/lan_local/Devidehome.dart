@@ -1,9 +1,13 @@
+// ignore_for_file: deprecated_member_use
+
 import 'dart:convert';
 
 import 'package:fevista/screens/event/lan_local/compass/compass.dart';
 import 'package:fevista/screens/event/lan_local/nakath/sinhala/countdown_timer_page.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
@@ -20,111 +24,82 @@ class _sinhala_homeState extends State<sinhala_home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('title'.tr),
-        centerTitle: true,
-      ),
-      body: ListView(
-        children: [
-          const SizedBox(
-            height: 20,
-          ),
-          Center(
-            child: Text(
-              'hello'.tr,
-              style: const TextStyle(fontSize: 15),
+        appBar: AppBar(
+          title: Text('title'.tr),
+          backgroundColor: const Color.fromARGB(255, 255, 196, 0),
+          centerTitle: true,
+        ),
+        body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: NetworkImage(
+                  "https://raw.githubusercontent.com/Thilina1/Store-Images/main/bg.png"),
+              fit: BoxFit.cover,
             ),
           ),
-          const SizedBox(
-            height: 15,
+          child: ListView(
+            children: [
+              const SizedBox(
+                height: 50,
+              ),
+              Center(
+                child: Text(
+                  'hello'.tr,
+                  style: const TextStyle(fontSize: 34),
+                ),
+              ),
+              const SizedBox(
+                height: 270,
+              ),
+              Center(
+                  child: Text(
+                'message'.tr,
+                style: const TextStyle(
+                    fontSize: 25, color: Color.fromARGB(255, 255, 0, 0)),
+                textAlign: TextAlign.center,
+              )),
+              const SizedBox(
+                height: 10,
+              ),
+              Container(
+                margin: const EdgeInsets.all(25),
+                height: 40,
+                child: RaisedButton(
+                  child: Text(
+                    'but'.tr,
+                    style: const TextStyle(
+                        fontSize: 20, color: Color.fromARGB(255, 224, 4, 4)),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => CountdownTimerPage()),
+                    );
+                  },
+                  color: const Color.fromARGB(255, 250, 192, 2),
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.fromLTRB(130, 20, 130, 20),
+                height: 40,
+                child: RaisedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const comMyApp()),
+                      );
+                    },
+                    child: Column(
+                      children: const [
+                        Icon(Icons.compass_calibration_sharp),
+                        Text("Directions")
+                      ],
+                    )),
+              ),
+            ],
           ),
-          Center(
-              child: Text(
-            'message'.tr,
-            style: const TextStyle(fontSize: 20),
-          )),
-          const SizedBox(
-            height: 10,
-          ),
-          Card(
-            child: InkWell(
-                borderRadius: BorderRadius.circular(5.0),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => CountdownTimerPage()),
-                  );
-                }, // Image tapped
-                child: ClipRRect(
-                    borderRadius: BorderRadius.circular(30.0),
-                    child: Image.network(
-                        'https://raw.githubusercontent.com/Thilina1/Store-Images/main/nakath.png',
-                        width: double.infinity,
-                        height: 120,
-                        fit: BoxFit.fill))),
-          ),
-          Card(
-            child: InkWell(
-                borderRadius: BorderRadius.circular(5.0),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const comMyApp()),
-                  );
-                }, // Image tapped
-                child: ClipRRect(
-                    borderRadius: BorderRadius.circular(30.0),
-                    child: Image.network(
-                        'https://raw.githubusercontent.com/Thilina1/Store-Images/main/1200x630wa.png',
-                        width: double.infinity,
-                        height: 120,
-                        fit: BoxFit.fill))),
-          ),
-          Card(
-            child: InkWell(
-                borderRadius: BorderRadius.circular(5.0),
-                onTap: () {}, // Image tapped
-                child: ClipRRect(
-                    borderRadius: BorderRadius.circular(30.0),
-                    child: Image.network(
-                        'https://raw.githubusercontent.com/Thilina1/Store-Images/main/D3EO2KUVAAA8fa3.png',
-                        width: double.infinity,
-                        height: 120,
-                        fit: BoxFit.fill))),
-          ),
-        ],
-      ),
-    );
-  }
-
-  void sendPushMessage() async {
-    try {
-      await http.post(
-        Uri.parse('https://fcm.googleapis.com/fcm/send'),
-        headers: <String, String>{
-          'Content-Type': 'application/json',
-          'Authorization':
-              'key=AAAA9xPglTQ:APA91bEuI1Hg2Mw6dLpBuh2bDvJfgcYOUm_rEUhq3glaPRzICYtTUQEG6iFF1r_EeWx3B_wC9sTDVxk0x1PYgcSh-N9Di4qG-GNF3LVDjhc9F5B_cfEqvdky-Rc1ILwdAc1oqtB5Ho8v',
-        },
-        body: jsonEncode(
-          <String, dynamic>{
-            'notification': <String, dynamic>{
-              'body': 'Test Body',
-              'title': 'Test Title 2'
-            },
-            'priority': 'high',
-            'data': <String, dynamic>{
-              'click_action': 'FLUTTER_NOTIFICATION_CLICK',
-              'id': '1',
-              'status': 'done'
-            },
-            "to": "$token",
-          },
-        ),
-      );
-    } catch (e) {
-      print("error push notification");
-    }
+        ));
   }
 }

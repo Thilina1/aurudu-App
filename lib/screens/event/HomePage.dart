@@ -13,8 +13,8 @@ class Homepage1 extends StatefulWidget {
 
   final List locale = [
     {'name': 'ENGLISH', 'locale': Locale('en', 'US')},
-    {'name': 'ಕನ್ನಡ', 'locale': Locale('kn', 'IN')},
-    {'name': 'हिंदी', 'locale': Locale('hi', 'IN')},
+    {'name': 'සිංහල', 'locale': Locale('sn', 'LK')},
+    {'name': 'தமிழ்', 'locale': Locale('tm', 'LK')},
   ];
 
   @override

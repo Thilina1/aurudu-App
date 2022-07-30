@@ -11,7 +11,7 @@ class Mainevent extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       translations: LocaleString(),
       locale: Locale('en', 'US'),
-      title: 'Flutter Demo',
+      title: 'Aurudu',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

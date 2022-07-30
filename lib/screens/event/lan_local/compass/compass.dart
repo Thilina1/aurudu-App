@@ -31,7 +31,8 @@ class _comMyAppState extends State<comMyApp> {
       home: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          title: const Text('Flutter Compass'),
+          title: const Text('Compass'),
+          backgroundColor: const Color.fromARGB(255, 255, 196, 0),
         ),
         body: Builder(builder: (context) {
           if (_hasPermissions) {

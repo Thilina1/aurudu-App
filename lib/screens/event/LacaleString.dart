@@ -8,6 +8,7 @@ class LocaleString extends Translations {
           'hello': 'AYOBOWAN',
           'message': 'Happy Sinhala And Tamil New Year 2023!',
           'title': 'Aurudu 2023',
+          'but': 'View All Charithtra',
           'nakath1': 'Inauspicious Time',
           'nakath2': 'Dawn Of the new year',
           'nakath3': 'Preperation Of Meals',
@@ -27,7 +28,8 @@ class LocaleString extends Translations {
         'sn_LK': {
           'hello': 'ආයුබෝවන්',
           'message': 'සුභ සිංහල සහ හින්දු නව වසරක් වේවා!',
-          'title': 'අවුරුදු 2023.',
+          'title': 'අවුරුදු 2023',
+          'but': 'සියලුම චාරිත්ත්‍ර',
           'nakath1': 'පුන්‍ය කාලය.',
           'nakath2': 'අලුත් අවුරුදු උදාව.',
           'nakath3': 'ආහාර පිළියෙල කිරීම.',
@@ -44,22 +46,6 @@ class LocaleString extends Translations {
           'nakath5-1': 'අප්‍රේල් 17 (ඉරිදා) පෙරවරු 7.04 ට තෙල් ගෑම.',
           'nakath6-1': 'අප්‍රේල් 18 (සඳුදා) උදේ 6:51 ට රැකියාවට පිටත් වීම.',
         },
-        'tm_LK': {
-          'hello': '',
-          'message': '',
-          'title': '',
-          'nakath1': '',
-          'nakath2': '',
-          'nakath3': '',
-          'nakath4': '',
-          'nakath5': '',
-          'nakath6': '',
-          'nakath1-1': '',
-          'nakath2-1': '',
-          'nakath3-1': '',
-          'nakath4-1': '',
-          'nakath5-1': '',
-          'nakath6-1': '',
-        }
+        'tm_LK': {}
       };
 }
